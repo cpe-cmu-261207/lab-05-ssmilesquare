@@ -1,13 +1,13 @@
 import {useState} from 'react'
 import React from 'react'
-import Task from './task'
+import Task from './Task'
 
 type TaskData = {
     id:number,
     text:string
 }
 
-const todo = () => {
+const Todo = () => {
     const [input,setInputValue] = useState<string>("")
     const [todoList,setTodoList] = useState<TaskData[]>([])
     const [doneList,setDoneList] = useState<TaskData[]>([])
@@ -25,10 +25,10 @@ const todo = () => {
         if (input === "") {
             alert("Task connot be empty!!")
         }else{
-            const todo = todoList
+            const Todo = todoList
             const Id = (new Date()).getTime()
-            todo.push({id:Id,text:input})
-            setTodoList(todo)
+            Todo.push({id:Id,text:input})
+            setTodoList(Todo)
             setInputValue("")  
         }
         document.querySelectorAll("input")[0].value = ""
@@ -48,6 +48,7 @@ const todo = () => {
 
     return (
         <div className='mx-auto max-w-4xl'>
+            {/* task input and add button */}
             <div className='flex space-x-1'>
                 <input className='border border-gray-400 w-full text-2xl'
                     onKeyDown={onKeyDownCallback} onChange={onChangeCallback}></input>
@@ -58,4 +59,4 @@ const todo = () => {
         </div>
     )
 }
-export default todo
+export default Todo
