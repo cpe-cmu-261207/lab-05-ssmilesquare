@@ -10,13 +10,13 @@ function App() {
   return (
     <div>
       {/* header section */}
-      <Header></Header>
+      <Header/>
 
       {/* todo section */}
-      <Todo></Todo>
+      <Todo>
       
       {/* footer section */}
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 }
