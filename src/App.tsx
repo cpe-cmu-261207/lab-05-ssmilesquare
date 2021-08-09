@@ -13,7 +13,7 @@ function App() {
       <Header/>
 
       {/* todo section */}
-      <Todo>
+      <Todo/>
       
       {/* footer section */}
       <Footer/>
